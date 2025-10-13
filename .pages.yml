@@ -48,7 +48,6 @@ content:
     path: src/_data/config.json
     fields:
       - { name: siteName, label: Site Name, type: string }
-      - { name: siteDescription, label: Site Description, type: string }
       - { name: siteURL, label: Site URL, type: string }
       - { name: siteAuthor, label: Site Author, type: string }
       - { name: siteLang, label: Site Language, type: string }
