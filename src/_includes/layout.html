@@ -1,5 +1,6 @@
 ---
 layout: head.html
+css: "post.css"
 ---
 
 <body class="espacamento-primario">
@@ -18,6 +19,7 @@ layout: head.html
     {% assign nextPost = collections.posts | getNextCollectionItem %}
     {% if previousPost or nextPost %}
 
+    <hr>
     <nav id="pagination" class="pagination conteudo--alinhado container" aria-label="Navegação entre posts">
         <ul class="pagination__lista">
             {% if previousPost %}
@@ -46,7 +48,6 @@ layout: head.html
         </ul>
     </nav>
     {% endif %}
-
     {% include "footer.html" %}
 
 </body>
