@@ -1,0 +1,263 @@
+/* ===== COMPONENTES ESPECÍFICOS ===== */
+
+/* Introdução */
+.introducao {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 16px;
+}
+
+@media (min-width: 1100px) {
+  .introducao {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .introducao img {
+    order: 2;
+    place-self: stretch;
+    object-fit: cover;
+  }
+}
+
+/* Notícias */
+.noticia__lista {
+  display: flex;
+  flex-direction: column;
+}
+
+.noticia__item {
+  padding: 10px 10px 30px 10px;
+  background-color: var(--cor-fundo-claro);
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+  max-width: max-content;
+
+  @media (min-width: 500px) {
+    padding: 20px 20px 40px 20px;
+  }
+}
+
+/* Impacto */
+.impacto {
+  display: grid;
+  justify-content: center;
+}
+
+.impacto__video {
+  max-width: 584px;
+}
+
+/* Sobre/Quem Somos */
+.sobre__conteudo {
+  display: grid;
+  gap: 16px;
+  justify-content: center;
+
+  @media (min-width: 1000px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-top: 48px;
+  }
+}
+
+/* Pilares */
+.pilares {
+  display: grid;
+
+  gap: 16px;
+  justify-content: center;
+}
+
+.pilares__lista {
+  place-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @media (min-width: 1000px) {
+    padding-top: 128px;
+  }
+}
+
+.pilares__item {
+  padding: 16px;
+  background-color: transparent;
+
+  h4 {
+    margin-bottom: 8px;
+  }
+
+  p {
+    margin-bottom: 16px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .pilares {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .pilares__texto {
+    place-self: start;
+    position: sticky;
+    top: 48px;
+  }
+}
+
+/* Como ajudar */
+.como-ajudar__imagens {
+  display: flex;
+  overflow-x: scroll;
+  cursor: grab;
+  padding: 5px 0;
+  gap: 8px;
+  background-color: var(--cor-fundo-escuro);
+
+  @media (min-width: 1000px) {
+    padding: 10px 0;
+    gap: 13px;
+  }
+}
+
+.como-ajudar__lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 48px;
+  justify-content: center;
+}
+
+.como-ajudar__item {
+  max-width: 300px;
+  flex: 1 1 300px;
+}
+
+.como-ajudar h3.titulo {
+  max-width: max-content;
+  margin-bottom: 16px;
+}
+
+p.como-ajudar__texto {
+  max-width: max-content;
+  margin-bottom: 32px;
+
+  @media (min-width: 1000px) {
+    margin-bottom: 48px;
+  }
+}
+
+.como-ajudar__item p {
+  margin-bottom: 16px;
+}
+
+@media (min-width: 1114px) {
+  .como-ajudar__lista {
+    justify-content: space-between;
+  }
+}
+
+/* Newsletter */
+.newsletter .titulo {
+  max-width: max-content;
+}
+
+button[type="submit"] {
+  display: block;
+  font-family: var(--fonte-titulo);
+  font-weight: 500;
+  font-size: var(--size-lg);
+  line-height: 1.5;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  background-color: var(--cor-primaria);
+  color: var(--cor-fundo-claro);
+  width: 100%;
+  border-radius: var(--raio-borda);
+  box-shadow: var(--sombra-suave);
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: var(--cor-primaria-escura);
+  }
+
+  @media (min-width: 768px) {
+    padding: 18px 32px;
+    min-width: 300px;
+    max-width: fit-content;
+  }
+}
+
+label {
+  display: block;
+  font-family: var(--fonte-titulo);
+  font-weight: 500;
+  font-size: var(--size-lg);
+  line-height: 1.5;
+  margin-bottom: 4px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 8px;
+  }
+}
+
+input[type="email"] {
+  font-family: var(--fonte-texto);
+  color: var(--cor-texto-claro);
+  background-color: var(--cor-fundo-escuro);
+  border: 1px solid #787878;
+  border-radius: var(--raio-borda);
+  width: 100%;
+  font-size: var(--size-lg);
+  padding: 10px 8px;
+  margin-bottom: 1rem;
+
+  &::placeholder {
+    font-family: inherit;
+  }
+
+  @media (min-width: 768px) {
+    padding: 18px 32px;
+    max-width: 524px;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Parceiros */
+
+/* Slide */
+.slide__conteudo {
+  position: relative;
+}
+
+.slide__imagens {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  cursor: grab;
+}
+
+.slide__seta {
+  background-color: transparent;
+  cursor: pointer;
+
+  & img {
+    width: clamp(1.5rem, 5vw, 3.375rem);
+  }
+
+  &.slide__setaEsquerda {
+    position: absolute;
+    left: 10px;
+    top: 45%;
+  }
+
+  &.slide__setaDireita {
+    position: absolute;
+    right: 10px;
+    top: 45%;
+  }
+}

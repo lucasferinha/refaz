@@ -1,0 +1,310 @@
+/* ===== SISTEMA DE ESPAÇAMENTO ===== */
+.texto-conteudo {
+  --space-base: 16px;
+  --space-compact: 8px;
+  --space-list: 12px;
+
+  & > * {
+    margin-bottom: var(--space-base);
+  }
+
+  & > :is(p, h1, h2, h3, h4, h5, h6, blockquote) {
+    margin-bottom: var(--space-compact);
+  }
+
+  & > :is(ul, ol) li,
+  & > :is(.postagem__poster, .btn) {
+    margin-bottom: var(--space-list);
+  }
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* ===== SISTEMA DE ESPAÇAMENTO → Página única ===== */
+.texto-conteudo--pagina {
+  --space-base: 16px;
+  --space-compact: 8px;
+  --space-list: 12px;
+  --space-title-mobile: 32px;
+  --space-title-desktop: 48px;
+  --space-subtitle: 24px;
+
+  /* Reset base */
+  & > * {
+    margin-bottom: var(--space-base);
+    margin-top: 0;
+  }
+
+  /* Elementos compactos */
+  & > :is(p, blockquote) {
+    margin-bottom: var(--space-compact);
+  }
+
+  /* Listas e componentes */
+  & > :is(ul, ol) li,
+  & > :is(.postagem__poster, .btn) {
+    margin-bottom: var(--space-list);
+  }
+
+  /* ===== SISTEMA DE TÍTULOS ===== */
+  /* Regra geral para títulos seguidos de conteúdo */
+  & > :is(h1, h2, h3, h4, h5, h6) {
+    margin-bottom: var(--space-compact);
+  }
+
+  /* H2 com espaçamento superior amplo se NÃO precededido por título */
+  & > h2:not(:is(h1, h2, h3, h4, h5, h6) + *) {
+    margin-top: var(--space-title-mobile);
+
+    @media (min-width: 768px) {
+      margin-top: var(--space-title-desktop);
+    }
+  }
+
+  /* H3, H4, H5 com espaçamento reduzido (mesma seção) */
+  & > :is(h3, h4, h5) {
+    margin-top: var(--space-subtitle);
+  }
+
+  /* Títulos precedidos por outros títulos - espaçamento reduzido */
+  & > :is(h1, h2, h3, h4, h5, h6) + :is(h2, h3, h4, h5, h6) {
+    margin-top: var(--space-subtitle);
+  }
+
+  /* Remove espaçamento superior do primeiro elemento */
+  & > *:first-child {
+    margin-top: 0;
+  }
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.espacamento-primario {
+  /* Espaçamento entre elementos irmãos no mesmo nível */
+  & :where(main, section, article) + :where(section, article, footer) {
+    margin-top: 96px;
+
+    @media (min-width: 768px) {
+      margin-top: 128px;
+    }
+  }
+
+  /* Espaçamento reduzido para elementos aninhados */
+  &
+    :is(section, article, header, main)
+    :is(article, section, header, footer):not(:first-child) {
+    margin-top: 48px;
+
+    @media (min-width: 768px) {
+      margin-top: 64px;
+    }
+  }
+}
+
+.conteudo--alinhado {
+  display: grid;
+  justify-content: center;
+}
+
+.container {
+  --m-vertical: 10px;
+  margin-left: var(--m-vertical);
+  margin-right: var(--m-vertical);
+
+  @media (min-width: 768px) {
+    --m-vertical: 80px;
+  }
+}
+
+/* ===== COMPONENTES REUTILIZÁVEIS ===== */
+
+/* Sistema de títulos */
+.titulo {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+
+  &.--0 {
+    font-weight: 400;
+    font-size: clamp(0.875rem, 2vw + 0.5rem, 1.125rem);
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    &::before {
+      content: url("/assets/images/quadrado.svg");
+      display: inline-block;
+      margin-right: 4px;
+    }
+  }
+
+  &.--1 {
+    font-size: clamp(1.5rem, 4vw + 1rem, 3rem);
+    line-height: 1.1;
+    max-width: 20ch;
+  }
+
+  &.--2 {
+    font-size: var(--size-xxl);
+    line-height: 1.2;
+    max-width: 20ch;
+  }
+
+  &.--3 {
+    font-size: var(--size-xl);
+    line-height: 1.25;
+
+    &.__link {
+      font-weight: 400;
+      text-decoration: underline;
+      color: var(--cor-texto);
+      max-width: 31ch;
+
+      &:hover {
+        color: var(--cor-primaria-escura);
+      }
+    }
+  }
+}
+
+/* Marcadores */
+.marca {
+  display: inline-block;
+  font-size: var(--size-xs);
+  padding: 2px 4px;
+  font-family: var(--fonte-titulo);
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: var(--raio-borda);
+
+  &.--0 {
+    color: #4b4b4b;
+    background-color: #f5f5f5;
+    border: solid 1px #ebebeb;
+  }
+
+  &.--1 {
+    color: #17581f;
+    background-color: #dafdde;
+    border: solid 1px #bfe9c4;
+  }
+
+  &.--2 {
+    color: #581717;
+    background-color: #fddada;
+    border: solid 1px #e9bfbf;
+  }
+
+  &.--3 {
+    color: #584117;
+    background-color: #fdf1da;
+    border: solid 1px #e9dabf;
+  }
+}
+
+/* Texto e citações */
+p,
+blockquote {
+  font-family: var(--fonte-texto);
+  font-weight: 400;
+  font-size: clamp(1rem, 1vw + 0.75rem, 1.25rem);
+  line-height: 1.5;
+  max-width: 50ch;
+}
+
+blockquote {
+  font-style: italic;
+  padding: 0 0 0 10px;
+  border-left: 3px solid var(--cor-primaria);
+}
+
+/* Botões */
+.btn {
+  display: block;
+  font-family: var(--fonte-titulo);
+  font-weight: 500;
+  font-size: var(--size-lg);
+  line-height: 1.5;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  width: 100%;
+  border-radius: var(--raio-borda);
+  box-shadow: var(--sombra-suave);
+  transition: all 0.3s;
+
+  @media (min-width: 768px) {
+    padding: 18px 32px;
+    min-width: 300px;
+    max-width: fit-content;
+  }
+
+  &.--primario {
+    background-color: var(--cor-primaria);
+    color: var(--cor-fundo);
+
+    &:hover {
+      background-color: var(--cor-primaria-escura);
+    }
+  }
+
+  &.--secundario {
+    background-color: var(--cor-secundaria);
+    color: #244668;
+
+    &:hover {
+      background-color: var(--cor-secundaria-escura);
+    }
+  }
+
+  &.--center {
+    place-self: center;
+  }
+}
+
+/* Logo */
+.logo {
+  max-width: 47px;
+
+  @media (min-width: 1200px) {
+    max-width: 87px;
+  }
+}
+
+/* Estados de foco para acessibilidade */
+.btn,
+.nav__link,
+input,
+button {
+  &:focus {
+    outline: 2px solid var(--cor-primaria);
+    outline-offset: 2px;
+  }
+}
+
+/* Lista */
+.lista-padrao {
+  list-style-type: square;
+  padding-left: 1.4rem;
+}
+
+.lista-padrao li {
+  font-family: var(--fonte-texto);
+  font-size: var(--size-md);
+  font-weight: 400;
+  font-size: clamp(1rem, 1vw + 0.75rem, 1.25rem);
+  line-height: 1.5;
+  max-width: 50ch;
+}
+
+/* Altera a cor do marcador padrão diretamente */
+.lista-padrao li::marker {
+  color: #f58634; /* Cor padrão para todos os marcadores */
+}
+
+/* Sobrescreve a cor para itens pares */
+.lista-padrao li:nth-child(even)::marker {
+  color: #246db4;
+}

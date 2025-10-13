@@ -1,0 +1,21 @@
+table {
+  font-size: var(--size-lg);
+  line-height: 1.5;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border-bottom: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+tr > td:first-child {
+  font-weight: 700;
+}
+
+tr > * {
+  padding: 1rem 8px;
+}

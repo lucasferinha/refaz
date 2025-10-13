@@ -1,0 +1,49 @@
+---
+layout: head.html
+title: Blog — Instituto Refaz
+siteDescription: Acompanhe as novidades, eventos e histórias inspiradoras do Instituto Refaz no nosso blog oficial.
+css: "blog.css"
+---
+
+
+<body class="espacamento-primario">
+  {% include "header.html" %}
+
+  <main id="blog" class="blog texto-conteudo container" aria-labelledby="titulo-principal">
+    <h1 class="titulo --0">blog & NOTICIAS</h1>
+    <h2 class="titulo --1">Acompanhe as novidades e conquistas do Instituto Refaz.</h2>
+    <div class="tags">
+      {% if collections | filterTags %}
+      {% include "allTags.html" %}
+      {% endif %}
+    </div>
+
+    <section class="blog-postagens">
+      {% if not collections.post %}
+      <ol class="postagens__lista">
+        {% for i in collections.posts reversed %}
+        <li class="postagens__post">
+          <time class="post__dia">{{ i.date | dateFormat }}</time>
+          <h3><a href="{{ i.url }}" class="post__titulo">{{ i.data.title }}</a></h3>
+          <p class="post__descricao">{{ i.data.siteDescription }}</p>
+
+          <ul class="marcacoes__lista">
+            {% for tag in i.data.tags %}
+            {% if tag != "posts" %}
+            <li class="marcacoes__item">{{ tag }}</li>
+            {% endif %}
+            {% endfor %}
+          </ul>
+
+
+        </li>
+        {% endfor %}
+        {% else %}
+        <p>Ainda não á postagens</p>
+        {% endif %}
+      </ol>
+    </section>
+  </main>
+
+  {% include "footer.html" %}
+</body>

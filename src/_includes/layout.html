@@ -1,0 +1,52 @@
+---
+layout: head.html
+---
+
+<body class="espacamento-primario">
+    {% include "header.html" %}
+    <main id="introducao" class="introducao conteudo--alinhado texto-conteudo--pagina container" aria-labelledby="titulo-principal">
+        <header class="texto-conteudo">
+            <h1>{{ title }}</h1>
+            {% assign postCheck = collections.posts | getCollectionItem %}
+            {% if postCheck %}
+            <time>Data de publicação: {{ page.date | dateFormat }}</time>
+            {% endif %}
+        </header>
+        {{ content }}
+    </main>
+    {% assign previousPost = collections.posts | getPreviousCollectionItem %}
+    {% assign nextPost = collections.posts | getNextCollectionItem %}
+    {% if previousPost or nextPost %}
+
+    <nav id="pagination" class="pagination conteudo--alinhado container" aria-label="Navegação entre posts">
+        <ul class="pagination__lista">
+            {% if previousPost %}
+            <li class="pagination__item pageprev">
+                <a href="{{ previousPost.url }}" rel="prev" aria-label="Post anterior: {{ previousPost.data.title }}">
+                    <span class="pagination-direction">← Anterior</span>
+                    <span class="pagination-title">{{ previousPost.data.title }}</span>
+                    <time datetime="{{ previousPost.date | dateFormat: 'YYYY-MM-DD' }}">
+                        {{ previousPost.date | dateFormat }}
+                    </time>
+                </a>
+            </li>
+            {% endif %}
+
+            {% if nextPost %}
+            <li class="pagination__item pagenext">
+                <a href="{{ nextPost.url }}" rel="next" aria-label="Próximo post: {{ nextPost.data.title }}">
+                    <span class="pagination-direction">Próximo →</span>
+                    <span class="pagination-title">{{ nextPost.data.title }}</span>
+                    <time datetime="{{ nextPost.date | dateFormat: 'YYYY-MM-DD' }}">
+                        {{ nextPost.date | dateFormat }}
+                    </time>
+                </a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
+
+    {% include "footer.html" %}
+
+</body>

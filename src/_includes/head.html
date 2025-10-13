@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="{{ config.siteLang }}">
+
+<head>
+  <!-- Preload essencial -->
+  <link rel="preload" href="/assets/styles/base/reset.css" as="style">
+  <link rel="preload" href="/assets/styles/components/fonts.css" as="style">
+  <link rel="preload" href="/assets/styles/components/utilitaries.css" as="style">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>{{ title | default: config.siteName }}</title>
+  <meta name="description" content="{{ siteDescription | default: config.defaultDescription }}" />
+
+  <!-- Cache busting apenas na home -->
+  {% if page.url == '/' %}
+  <meta http-equiv="Cache-Control" content="max-age=0, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  {% endif %}
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="{{ title | default: config.siteName }}">
+  <meta property="og:description" content="{{ siteDescription | default: config.defaultDescription }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ config.siteURL }}{{ page.url }}">
+  <meta property="og:image" content="{{ config.siteURL }}/social.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title | default: config.siteName }}">
+  <meta name="twitter:description" content="{{ siteDescription | default: config.defaultDescription }}">
+  <meta name="twitter:image" content="{{ config.siteURL }}/social.png">
+
+  <link rel="stylesheet" href="/assets/styles/base/reset.css">
+  <link rel="stylesheet" href="/assets/styles/components/fonts.css">
+  <link rel="stylesheet" href="/assets/styles/components/utilitaries.css">
+  <link rel="stylesheet" href="/assets/styles/base/header.css">
+
+  {% if css %}
+  {% if css.first %}
+  {# caso seja uma lista de css #}
+  {% for file in css %}
+  <link rel="stylesheet" href="/assets/styles/{{ file }}">
+  {% endfor %}
+  {% else %}
+  <link rel="stylesheet" href="/assets/styles/{{ css }}">
+  {% endif %}
+  {% else %}
+  {% assign slug = page.fileSlug | append: ".css" %}
+  <link rel="stylesheet" href="/assets/styles/{{ slug }}">
+  {% endif %}
+
+  <link rel="stylesheet" href="/assets/styles/base/footer.css">
+  <link rel="icon" sizes="16x16 24x24 32x32 64x64" href="/assets/images/favicon.ico">
+
+  <script src="/assets/js/menu.js" defer></script>
+  {% if js %}
+  {% if js.first %}
+  {% for file in js %}
+  <script src="/assets/js/{{ file }}" defer></script>
+  {% endfor %}
+  {% else %}
+  <script src="/assets/js/{{ js }}" defer></script>
+  {% endif %}
+  {% endif %}
+</head>
+{{ content }}
+
+</html>

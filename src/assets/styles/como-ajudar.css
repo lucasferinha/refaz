@@ -1,0 +1,5 @@
+.qr-code figcaption {
+  font-size: var(--size-xs);
+  max-width: 29ch;
+  word-wrap: break-word;
+}

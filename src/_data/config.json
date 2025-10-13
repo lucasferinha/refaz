@@ -1,0 +1,9 @@
+{
+  "siteName": "Instituto Refaz",
+  "siteURL": "http://localhost:1234",
+  "siteAuthor": "Instituto Refaz",
+  "siteLang": "pt-BR",
+  "authorLink": "http://localhost:1234",
+  "authorContact": "contato@institutorefaz.org",
+  "siteSubDir": "/"
+}
