@@ -1,4 +1,12 @@
 /* Header */
+#header {
+  margin-bottom: 48px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 64px;
+  }
+}
+
 .cabecalho {
   display: flex;
   align-items: center;

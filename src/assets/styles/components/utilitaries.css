@@ -155,12 +155,12 @@
   &.--3 {
     font-size: var(--size-xl);
     line-height: 1.25;
+    max-width: 31ch;
 
     &.__link {
       font-weight: 400;
       text-decoration: underline;
       color: var(--cor-texto);
-      max-width: 31ch;
 
       &:hover {
         color: var(--cor-primaria-escura);

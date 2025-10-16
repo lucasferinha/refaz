@@ -45,14 +45,14 @@ js: "slide.js"
       <h2 id="noticias-titulo" class="titulo --2">Notícias e Conquistas</h2>
       <p>Fique por dentro das novidades que impulsionam nossa missão.</p>
       <ul class="noticia__lista texto-conteudo">
+        {% assign latest_posts = collections.posts | reverse | getLatestTwo %}
+        {% for i in latest_posts %}
         <li class="noticia__item">
-          <time datetime="2025-10-05">05/10/2025</time>
-          <h3><a href="#" class="titulo --3 __link">Aula Inaugural de Inglês: Um Novo Capítulo de Esperança</a></h3>
+          <time datetime="{{ i.date | dateFormat }}">{{ i.date | dateFormat }}</time>
+          <h3><a href="{{ i.url }}" class="titulo --3 __link">{{ i.data.title }}</a></h3>
+          <p>{{ i.data.siteDescription }}</p>
         </li>
-        <li class="noticia__item">
-          <time datetime="2025-10-05">04/10/2025</time>
-          <h3><a href="#" class="titulo --3 __link">"O inglês me mostrou que posso sonhar maior", diz Arthur</a></h3>
-        </li>
+        {% endfor %}
       </ul>
       <a href="#" class="btn --secundario --center">Acompanhe o nosso Blog</a>
     </article>

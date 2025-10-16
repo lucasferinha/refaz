@@ -8,8 +8,9 @@ pagination:
     - posts
 permalink: /tags/{{ tag }}/
 layout: layout.html
+css: "tags.css"
 eleventyComputed:
-  title: Tagged {{ tag }}
+  title: <strong>{{ tag }}</strong>
 ---
 
 {% assign tags__lista = collections[ tag ] | forceReverse %}
@@ -17,9 +18,10 @@ eleventyComputed:
 {% for post in tags__lista %}
 <article class="texto-conteudo--pagina">
     <header class="tagged">
-        <h2><a href="{{ post.url  }}">{{ post.data.title }}</a></h2>
-        <time>{{ post.date | dateFormat }}</time>
+        <h2 class="tagged__titulo"><a href="{{ post.url  }}">{{ post.data.title }}</a></h2>
+        <time class="tagged__dia">{{ post.date | dateFormat }}</time>
     </header>
-{{ post.content }}
+    <p class="tagged__texto">{{ post.data.siteDescription }}</p>
+    <span class="tagged__item">{{ tag }}</span>
 </article>
 {% endfor %}

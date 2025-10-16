@@ -70,6 +70,10 @@ main ul {
   padding-left: 1.4rem;
 }
 
+main ol {
+  padding-left: 1.4rem;
+}
+
 main li {
   font-family: var(--fonte-texto);
   font-size: var(--size-md);

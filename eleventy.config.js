@@ -55,8 +55,8 @@ export default function (eleventyConfig) {
     return DMY;
   });
 
-  eleventyConfig.addFilter("getLatestFive", function (value) {
-    const converted = value.slice(0, 5);
+  eleventyConfig.addFilter("getLatestTwo", function (value) {
+    const converted = value.slice(0, 2);
     return converted;
   });
 

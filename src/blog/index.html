@@ -23,7 +23,7 @@ css: "blog.css"
       <ol class="postagens__lista">
         {% for i in collections.posts reversed %}
         <li class="postagens__post">
-          <time class="post__dia">{{ i.date | dateFormat }}</time>
+          <time class="post__dia" datetime="{{ i.date | dateFormat }}">{{ i.date | dateFormat }}</time>
           <h3><a href="{{ i.url }}" class="post__titulo">{{ i.data.title }}</a></h3>
           <p class="post__descricao">{{ i.data.siteDescription }}</p>
 

@@ -1,0 +1,41 @@
+h1 {
+  font-size: var(--size-xxxl);
+  text-transform: uppercase;
+}
+
+/* Pôster */
+.tagged__dia {
+  font-size: var(--size-lg);
+  margin-bottom: 8px;
+}
+
+.tagged__titulo a {
+  color: #333333;
+  font-family: var(--fonte-titulo);
+  font-size: var(--size-xxl);
+  font-weight: 700;
+  line-height: 1.1;
+  text-decoration: underline;
+  margin-bottom: 8px;
+  max-width: 20ch;
+  transition: all 0.3s;
+
+  &:hover {
+    text-decoration: line-through;
+  }
+}
+
+.tagged__descricao {
+  margin-bottom: 16px;
+}
+
+.tagged__item {
+  display: inline-block;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  font-size: var(--size-xs);
+  font-family: var(--fonte-titulo);
+  background-color: #e0e0e0;
+  color: #464646;
+}
