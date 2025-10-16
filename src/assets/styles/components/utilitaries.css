@@ -158,12 +158,12 @@
     max-width: 31ch;
 
     &.__link {
-      font-weight: 400;
       text-decoration: underline;
       color: var(--cor-texto);
 
       &:hover {
         color: var(--cor-primaria-escura);
+        text-decoration: line-through;
       }
     }
   }

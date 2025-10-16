@@ -41,7 +41,6 @@
 
   {% if css %}
   {% if css.first %}
-  {# caso seja uma lista de css #}
   {% for file in css %}
   <link rel="stylesheet" href="/assets/styles/{{ file }}">
   {% endfor %}

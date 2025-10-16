@@ -60,19 +60,13 @@ body {
 body::before {
   content: "";
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100lvw;
-  height: 110lvh;
-  pointer-events: none;
-  background-image: url(/assets/images/grain.gif);
+  inset: 0;
+  background-image: url("/assets/images/grain.gif"); /* coloque seu GIF aqui */
   background-repeat: repeat;
-  background-position: 0 0;
-  background-size: 256px 256px;
-  opacity: 0.045;
-  z-index: 9999;
+  background-size: 300px; /* ajuste o tamanho da granulação */
+  opacity: 0.04; /* reduz para não distrair */
+  pointer-events: none;
+  z-index: 1;
 }
 
 img {
