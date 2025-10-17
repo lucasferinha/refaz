@@ -15,11 +15,11 @@ css: "post.css"
         </header>
         {{ content }}
     </main>
+
+    <hr>
     {% assign previousPost = collections.posts | getPreviousCollectionItem %}
     {% assign nextPost = collections.posts | getNextCollectionItem %}
     {% if previousPost or nextPost %}
-
-    <hr>
     <nav id="pagination" class="pagination conteudo--alinhado container" aria-label="Navegação entre posts">
         <ul class="pagination__lista">
             {% if previousPost %}
@@ -52,6 +52,8 @@ css: "post.css"
         </ul>
     </nav>
     {% endif %}
+
+    <hr>
     {% include "footer.html" %}
 
 </body>

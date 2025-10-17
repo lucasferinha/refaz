@@ -1,7 +1,7 @@
 <ul class="tags__lista">
     {% assign allTags = collections | filterTags %}
     {% for tag in allTags %}
-    {% if collections[tag].length > 0 %}
+    {% if collections[tag].length > 1 %}
     <li class="tags__item">
         <a href="/tags/{{ tag }}">{{ tag }}
             <aside>({{ collections[tag].length }})</aside>
