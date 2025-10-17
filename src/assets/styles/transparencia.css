@@ -1,8 +1,13 @@
+.tabela {
+  overflow: auto;
+}
+
 table {
   font-size: var(--size-lg);
   line-height: 1.5;
   text-align: left;
   border-collapse: collapse;
+  width: 100%;
 }
 
 th,

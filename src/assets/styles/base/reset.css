@@ -61,10 +61,10 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-image: url("/assets/images/grain.gif"); /* coloque seu GIF aqui */
+  background-image: url("/assets/images/noise.png"); /* coloque seu GIF aqui */
   background-repeat: repeat;
   background-size: 300px; /* ajuste o tamanho da granulação */
-  opacity: 0.04; /* reduz para não distrair */
+  opacity: 0.03; /* reduz para não distrair */
   pointer-events: none;
   z-index: 1;
 }

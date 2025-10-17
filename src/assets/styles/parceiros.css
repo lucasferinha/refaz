@@ -1,0 +1,5 @@
+small {
+  display: block;
+  font-size: var(--size-xs);
+  max-width: 39ch;
+}
