@@ -14,3 +14,7 @@
   color: #fff;
   text-align: center;
 }
+
+.equipe__voluntario img {
+  max-height: 220px;
+}

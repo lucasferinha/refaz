@@ -54,12 +54,13 @@
   display: grid;
   gap: 16px;
   justify-content: center;
+  margin-top: 16px;
 
   @media (min-width: 1000px) {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     align-items: center;
-    margin-top: 48px;
+    margin-top: 32px;
   }
 }
 

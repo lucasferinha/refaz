@@ -106,14 +106,24 @@
 }
 
 .conteudo--alinhado {
-  display: grid;
-  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.conteudo--alinhado :is(h1, h2, h3, h4, h5, h6, p, blockquote, li) {
+  max-width: max-content;
+}
+
+.conteudo--alinhado :is(.container) {
+  padding: 0;
 }
 
 .container {
   --m-vertical: 10px;
-  margin-left: var(--m-vertical);
-  margin-right: var(--m-vertical);
+  padding-left: var(--m-vertical);
+  padding-right: var(--m-vertical);
 
   @media (min-width: 768px) {
     --m-vertical: 80px;
