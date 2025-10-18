@@ -14,7 +14,7 @@ export default function (eleventyConfig) {
     formats: ["webp"],
 
     // Cria tamanhos variados (para srcset responsivo)
-    widths: [400, "auto"],
+    widths: ["auto"],
 
     // Define comportamento do HTML gerado
     htmlOptions: {
