@@ -3,5 +3,19 @@
   <h3 class="titulo --2">Não perca nossas novidades</h3>
   <p>Receba histórias inspiradoras de transformação no seu e-mail através do nosso newsletter.</p>
 
-  <iframe src="https://ferinhaoriginale.substack.com/embed" width="480" height="320" loading="lazy" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no"></iframe>
+  <div id="newsletter-embed" class="newsletter-placeholder" role="region" aria-label="Formulário de inscrição na newsletter">
+    <button id="load-newsletter" class="btn" type="button">Carregar formulário de inscrição</button>
+    <p>Para proteger sua privacidade, o formulário do Substack só é carregado após seu consentimento.</p>
+  </div>
+
+  <script>
+    document.getElementById('load-newsletter').addEventListener('click', function () {
+      const container = document.getElementById('newsletter-embed');
+      container.innerHTML = `
+      <iframe src="https://ferinhaoriginale.substack.com/embed" width="480" height="320" loading="lazy" style="border:1px solid #EEE; background:white;" frameborder="0" scrolling="no" title="Formulário de inscrição da newsletter"></iframe>
+    `;
+    });
+  </script>
+
+
 </article>
