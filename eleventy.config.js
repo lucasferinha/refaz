@@ -34,7 +34,7 @@ export default function (eleventyConfig) {
   });
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     formats: ["webp"],
-    widths: [300, 600, "auto"],
+    widths: [300, 500, 700],
 
     filenameFormat(id, src, width, format) {
       src = src.replace(/\\/g, "/");

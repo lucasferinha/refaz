@@ -1,10 +1,24 @@
 /* Header */
 #header {
-  margin-bottom: 48px;
+  margin-bottom: 24px;
 
   @media (min-width: 768px) {
-    margin-bottom: 64px;
+    margin-bottom: 48px;
   }
+}
+
+.header--hidden {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
+/* Quando visível, garante posição fixa no topo */
+.header {
+  background-color: var(--cor-fundo);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  transition: transform 0.3s ease;
 }
 
 .cabecalho {
@@ -72,8 +86,8 @@
 @media (min-width: 1200px) {
   .cabecalho {
     flex-direction: column;
-    padding: 40px 0;
-    gap: 20px;
+    padding: 22px 0px 10px;
+    gap: 10px;
   }
 }
 
@@ -90,7 +104,7 @@
     width: 100%;
     overflow-y: auto;
     background-color: var(--cor-fundo);
-    transform: translateX(100%);
+    transform: translateY(100%);
     opacity: 0;
     transition: transform 0.3s ease, opacity 0.3s ease;
     z-index: 1000;

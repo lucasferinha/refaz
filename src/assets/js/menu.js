@@ -40,3 +40,22 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+let lastScrollTop = 0;
+const header = document.querySelector(".header");
+
+window.addEventListener("scroll", () => {
+  const currentScroll = window.scrollY;
+
+  // Evita conflito: não esconde se menu estiver aberto
+  const menuAberto = document.body.classList.contains("menu-aberto");
+  if (menuAberto) return;
+
+  if (currentScroll > lastScrollTop && currentScroll > 80) {
+    header.classList.add("header--hidden");
+  } else {
+    header.classList.remove("header--hidden");
+  }
+
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+});
