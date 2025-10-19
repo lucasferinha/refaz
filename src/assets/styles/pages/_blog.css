@@ -90,14 +90,3 @@
   flex-wrap: wrap;
   gap: 8px 8px;
 }
-
-.marcacoes__item {
-  display: inline-block;
-  font-weight: 500;
-  text-transform: uppercase;
-  padding: 4px 8px;
-  font-size: var(--size-xs);
-  font-family: var(--fonte-titulo);
-  background-color: #e0e0e0;
-  color: #464646;
-}

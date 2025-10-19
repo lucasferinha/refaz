@@ -2,9 +2,20 @@
 layout: head.html
 title: Quem Somos — Instituto Refaz
 siteDescription: Conheça a história, a missão e os valores do Instituto Refaz, uma organização dedicada à educação, esporte e cultura no Rio de Janeiro.
-css: "quem-somos.css"
 ---
 
+{% css %}
+{{ '/assets/styles/base/_reset.css' | read }}
+{{ '/assets/styles/base/_typography.css' | read }}
+{{ '/assets/styles/base/_variables.css' | read }}
+{{ '/assets/styles/base/_utilities.css' | read }}
+{{ '/assets/styles/layout/_spacing.css' | read }}
+{{ '/assets/styles/layout/_header.css' | read }}
+{{ '/assets/styles/layout/_main.css' | read }}
+{{ '/assets/styles/pages/_quem-somos.css' | read }}
+{{ '/assets/styles/components/_buttons.css' | read }}
+{{ '/assets/styles/layout/_footer.css' | read }}
+{% endcss %}
 
 <body class="espacamento-primario">
   {% include "header.html" %}

@@ -1,8 +1,3 @@
-/* Newsletter */
-.newsletter .titulo {
-  max-width: max-content;
-}
-
 button[type="submit"] {
   display: block;
   font-family: var(--fonte-titulo);

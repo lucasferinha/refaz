@@ -83,12 +83,10 @@ main li {
   max-width: 50ch;
 }
 
-/* Altera a cor do marcador padrão diretamente */
 main li::marker {
-  color: #f58634; /* Cor padrão para todos os marcadores */
+  color: #f58634;
 }
 
-/* Sobrescreve a cor para itens pares */
 main li:nth-child(even)::marker {
   color: #246db4;
 }
@@ -117,79 +115,15 @@ main li:nth-child(even)::marker {
   gap: 10px;
 }
 
+.pagination-direction img {
+  width: 24px;
+}
+
 .pagination-title,
 .pagination__item time {
   display: block;
   font-size: var(--size-xs);
   line-height: 1.1;
-}
-
-/* Newsletter */
-.newsletter .titulo {
-  max-width: max-content;
-}
-
-button[type="submit"] {
-  display: block;
-  font-family: var(--fonte-titulo);
-  font-weight: 500;
-  font-size: var(--size-lg);
-  line-height: 1.5;
-  text-align: center;
-  text-transform: uppercase;
-  padding: 14px 28px;
-  background-color: var(--cor-primaria);
-  color: var(--cor-fundo-claro);
-  width: 100%;
-  border-radius: var(--raio-borda);
-  box-shadow: var(--sombra-suave);
-  cursor: pointer;
-  transition: all 0.3s;
-
-  &:hover {
-    background-color: var(--cor-primaria-escura);
-  }
-
-  @media (min-width: 768px) {
-    padding: 18px 32px;
-    min-width: 300px;
-    max-width: fit-content;
-  }
-}
-
-label {
-  display: block;
-  font-family: var(--fonte-titulo);
-  font-weight: 500;
-  font-size: var(--size-lg);
-  line-height: 1.5;
-  margin-bottom: 4px;
-
-  @media (min-width: 768px) {
-    margin-bottom: 8px;
-  }
-}
-
-input[type="email"] {
-  font-family: var(--fonte-texto);
-  color: var(--cor-texto-claro);
-  background-color: var(--cor-fundo-escuro);
-  border: 1px solid #787878;
-  border-radius: var(--raio-borda);
-  width: 100%;
-  font-size: var(--size-lg);
-  padding: 10px 8px;
-  margin-bottom: 1rem;
-
-  &::placeholder {
-    font-family: inherit;
-  }
-
-  @media (min-width: 768px) {
-    padding: 18px 32px;
-    max-width: 524px;
-    margin-bottom: 1.5rem;
-  }
 }
 
 @media (min-width: 604px) {

@@ -2,9 +2,23 @@
 layout: head.html
 title: Blog — Instituto Refaz
 siteDescription: Acompanhe as novidades, eventos e histórias inspiradoras do Instituto Refaz no nosso blog oficial.
-css: "blog.css"
 ---
 
+{% css %}
+{{ '/assets/styles/base/_reset.css' | read }}
+{{ '/assets/styles/base/_variables.css' | read }}
+{{ '/assets/styles/base/_typography.css' | read }}
+
+{{ '/assets/styles/layout/_spacing.css' | read }}
+{{ '/assets/styles/layout/_header.css' | read }}
+{{ '/assets/styles/layout/_main.css' | read }}
+{{ '/assets/styles/layout/_footer.css' | read }}
+
+{{ '/assets/styles/components/_buttons.css' | read }}
+
+{{ '/assets/styles/pages/_blog.css' | read }}
+{{ '/assets/styles/base/_utilities.css' | read }}
+{% endcss %}
 
 <body class="espacamento-primario">
   {% include "header.html" %}

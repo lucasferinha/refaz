@@ -1,0 +1,132 @@
+/* ===== COMPONENTES REUTILIZÁVEIS ===== */
+/* Sistema de títulos */
+.titulo {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+
+  &.--0 {
+    font-weight: 400;
+    font-size: clamp(0.875rem, 2vw + 0.5rem, 1.125rem);
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    &::before {
+      content: url("/assets/images/quadrado.svg");
+      display: inline-block;
+      margin-right: 4px;
+    }
+  }
+
+  &.--1 {
+    font-size: clamp(1.5rem, 4vw + 1rem, 3rem);
+    line-height: 1.1;
+    max-width: 20ch;
+  }
+
+  &.--2 {
+    font-size: var(--size-xxl);
+    line-height: 1.2;
+    max-width: 20ch;
+  }
+
+  &.--3 {
+    font-size: var(--size-xl);
+    line-height: 1.25;
+    max-width: 31ch;
+
+    &.__link {
+      text-decoration: underline;
+      color: var(--cor-texto);
+
+      &:hover {
+        color: var(--cor-primaria-escura);
+        text-decoration: line-through;
+      }
+    }
+  }
+}
+
+/* Marcadores */
+.marca {
+  display: inline-block;
+  font-size: var(--size-xs);
+  padding: 4px 8px;
+  font-family: var(--fonte-titulo);
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: var(--raio-borda);
+
+  &.--0 {
+    color: #4b4b4b;
+    background-color: #f5f5f5;
+    border: solid 1px #ebebeb;
+  }
+
+  &.--1 {
+    color: #17581f;
+    background-color: #dafdde;
+    border: solid 1px #bfe9c4;
+  }
+
+  &.--2 {
+    color: #581717;
+    background-color: #fddada;
+    border: solid 1px #e9bfbf;
+  }
+
+  &.--3 {
+    color: #584117;
+    background-color: #fdf1da;
+    border: solid 1px #e9dabf;
+  }
+}
+
+/* Texto e citações */
+p,
+blockquote {
+  font-family: var(--fonte-texto);
+  font-weight: 400;
+  font-size: clamp(1rem, 1vw + 0.75rem, 1.25rem);
+  line-height: 1.5;
+  max-width: 50ch;
+}
+
+blockquote {
+  font-style: italic;
+  padding: 0 0 0 10px;
+  border-left: 3px solid var(--cor-primaria);
+}
+
+/* Logo */
+.logo {
+  max-width: 47px;
+
+  @media (min-width: 1200px) {
+    max-width: 87px;
+  }
+}
+
+/* Lista */
+.lista-padrao {
+  list-style-type: square;
+  padding-left: 1.4rem;
+}
+
+.lista-padrao li {
+  font-family: var(--fonte-texto);
+  font-size: var(--size-md);
+  font-weight: 400;
+  font-size: clamp(1rem, 1vw + 0.75rem, 1.25rem);
+  line-height: 1.5;
+  max-width: 50ch;
+}
+
+/* Altera a cor do marcador padrão diretamente */
+.lista-padrao li::marker {
+  color: #f58634; /* Cor padrão para todos os marcadores */
+}
+
+/* Sobrescreve a cor para itens pares */
+.lista-padrao li:nth-child(even)::marker {
+  color: #246db4;
+}

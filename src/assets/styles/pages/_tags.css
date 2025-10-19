@@ -13,6 +13,7 @@ h1 {
   color: #333333;
   font-family: var(--fonte-titulo);
   font-size: var(--size-xxl);
+  font-style: normal;
   font-weight: 700;
   line-height: 1.1;
   text-decoration: underline;

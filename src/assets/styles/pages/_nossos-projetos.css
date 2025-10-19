@@ -1,0 +1,74 @@
+/* projetos */
+.projetos {
+  display: grid;
+  gap: 48px;
+  justify-content: center;
+}
+
+.projetos__lista {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
+  @media (min-width: 1000px) {
+    padding-top: 128px;
+  }
+}
+
+.projetos__item {
+  h4 {
+    margin-bottom: 8px;
+  }
+
+  p {
+    margin-bottom: 16px;
+    max-width: 33ch;
+  }
+}
+
+.projetos__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+@media (min-width: 1000px) {
+  .projetos {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .projetos__texto {
+    place-self: start;
+    position: sticky;
+    top: 48px;
+  }
+
+  .projetos__lista {
+    place-self: center;
+  }
+
+  .projetos__item {
+    padding: 16px;
+  }
+}
+
+/* Projetos Galeria */
+.galeria__imagens {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.galeria__imagens img {
+  width: 100%;
+  border: 4px solid #246db4;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+
+  @media (min-width: 1000px) {
+    border: 8px solid #246db4;
+  }
+}

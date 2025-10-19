@@ -1,5 +1,3 @@
-/* ===== COMPONENTES ESPECÍFICOS ===== */
-
 /* Introdução */
 .introducao {
   display: grid;
@@ -161,36 +159,3 @@ p.como-ajudar__texto {
 }
 
 /* Parceiros */
-
-/* Slide */
-.slide__conteudo {
-  position: relative;
-}
-
-.slide__imagens {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  cursor: grab;
-}
-
-.slide__seta {
-  background-color: transparent;
-  cursor: pointer;
-
-  & img {
-    width: clamp(1.5rem, 5vw, 3.375rem);
-  }
-
-  &.slide__setaEsquerda {
-    position: absolute;
-    left: 10px;
-    top: 45%;
-  }
-
-  &.slide__setaDireita {
-    position: absolute;
-    right: 10px;
-    top: 45%;
-  }
-}

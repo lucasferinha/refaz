@@ -8,10 +8,25 @@ pagination:
     - posts
 permalink: /tags/{{ tag }}/
 layout: layout.html
-css: "tags.css"
 eleventyComputed:
   title: <strong>{{ tag }}</strong>
 ---
+
+{% css %}
+{{ '/assets/styles/base/_reset.css' | read }}
+{{ '/assets/styles/base/_variables.css' | read }}
+{{ '/assets/styles/base/_typography.css' | read }}
+
+{{ '/assets/styles/layout/_spacing.css' | read }}
+{{ '/assets/styles/layout/_header.css' | read }}
+{{ '/assets/styles/layout/_main.css' | read }}
+{{ '/assets/styles/layout/_footer.css' | read }}
+
+{{ '/assets/styles/components/_buttons.css' | read }}
+
+{{ '/assets/styles/pages/_tags.css' | read }}
+{{ '/assets/styles/base/_utilities.css' | read }}
+{% endcss %}
 
 {% assign tags__lista = collections[ tag ] | forceReverse %}
 

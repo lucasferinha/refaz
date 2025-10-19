@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/* ===== RESET E CONFIGURAÇÕES GLOBAIS ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: var(--fonte-texto);
+  max-width: 1366px;
+  margin: auto;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("/assets/images/noise.png");
+  background-repeat: repeat;
+  background-size: 300px;
+  opacity: 0.03;
+  pointer-events: none;
+  z-index: -1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe,
+video {
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+}
+
+/* Estados de foco para acessibilidade */
+a,
+input,
+button {
+  &:focus {
+    outline: 2px solid var(--cor-primaria);
+    outline-offset: 2px;
+  }
+}
+
+strong {
+  font-weight: 700;
+}

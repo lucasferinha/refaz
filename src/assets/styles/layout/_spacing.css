@@ -1,0 +1,46 @@
+.espacamento-primario {
+  /* Espaçamento entre elementos irmãos no mesmo nível */
+  & :where(main, section, article) + :where(section, article, footer) {
+    margin-top: 96px;
+
+    @media (min-width: 768px) {
+      margin-top: 128px;
+    }
+  }
+
+  /* Espaçamento reduzido para elementos aninhados */
+  &
+    :is(section, article, header, main)
+    :is(article, section, header, footer):not(:first-child) {
+    margin-top: 48px;
+
+    @media (min-width: 768px) {
+      margin-top: 64px;
+    }
+  }
+}
+
+.conteudo--alinhado {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.conteudo--alinhado :is(h1, h2, h3, h4, h5, h6, p, blockquote, li) {
+  max-width: max-content;
+}
+
+.conteudo--alinhado :is(.container) {
+  padding: 0;
+}
+
+.container {
+  --m-vertical: 10px;
+  padding-left: var(--m-vertical);
+  padding-right: var(--m-vertical);
+
+  @media (min-width: 768px) {
+    --m-vertical: 80px;
+  }
+}

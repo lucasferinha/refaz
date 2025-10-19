@@ -3,6 +3,10 @@ import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import path from "node:path";
 import fs from "fs";
+import postcss from "postcss";
+import postcssImport from "postcss-import";
+import autoprefixer from "autoprefixer";
+import cssnano from "cssnano";
 
 const config = JSON.parse(fs.readFileSync("src/_data/config.json", "utf8"));
 
@@ -10,6 +14,24 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/");
 
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+  eleventyConfig.addBundle("css", {
+    outputFileExtension: "css",
+    toFileDirectory: "assets/styles", // destino do bundle em _site/
+    transforms: [
+      async function (content) {
+        let result = await postcss([
+          postcssImport, // permite @import
+          autoprefixer,
+          cssnano({ preset: "default" }),
+        ]).process(content, { from: undefined });
+        return result.css;
+      },
+    ],
+  });
+  // Filtro para ler conteúdo de arquivos CSS no Liquid
+  eleventyConfig.addFilter("read", function (filepath) {
+    return fs.readFileSync(`src${filepath}`, "utf8");
+  });
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     formats: ["webp"],
     widths: [300, 600, "auto"],

@@ -1,0 +1,43 @@
+/* Botões */
+.btn {
+  display: block;
+  font-family: var(--fonte-titulo);
+  font-weight: 500;
+  font-size: var(--size-lg);
+  line-height: 1.5;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  width: 100%;
+  border-radius: var(--raio-borda);
+  box-shadow: var(--sombra-suave);
+  transition: all 0.3s;
+
+  @media (min-width: 768px) {
+    padding: 18px 32px;
+    min-width: 300px;
+    max-width: fit-content;
+  }
+
+  &.--primario {
+    background-color: var(--cor-primaria);
+    color: var(--cor-fundo);
+
+    &:hover {
+      background-color: var(--cor-primaria-escura);
+    }
+  }
+
+  &.--secundario {
+    background-color: var(--cor-secundaria);
+    color: #244668;
+
+    &:hover {
+      background-color: var(--cor-secundaria-escura);
+    }
+  }
+
+  &.--center {
+    place-self: center;
+  }
+}

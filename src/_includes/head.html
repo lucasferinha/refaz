@@ -2,13 +2,6 @@
 <html lang="{{ config.siteLang }}">
 
 <head>
-  <!-- Preload essencial -->
-  <link rel="preload" href="/assets/styles/base/reset.css" as="style">
-  <link rel="preload" href="/assets/styles/components/fonts.css" as="style">
-  <link rel="preload" href="/assets/styles/components/utilitaries.css" as="style">
-  <link rel="preload" href="/assets/styles/base/header.css" as="style">
-  <link rel="preload" href="/assets/styles/base/footer.css" as="style">
-
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -36,37 +29,13 @@
   <meta name="twitter:description" content="{{ siteDescription | default: config.defaultDescription }}">
   <meta name="twitter:image" content="{{ config.siteURL }}/social.png">
 
-  <link rel="stylesheet" href="/assets/styles/base/reset.css">
-  <link rel="stylesheet" href="/assets/styles/components/fonts.css">
-  <link rel="stylesheet" href="/assets/styles/components/utilitaries.css">
-  <link rel="stylesheet" href="/assets/styles/base/header.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="{% getBundleFileUrl 'css' %}">
 
-  {% if css %}
-  {% if css.first %}
-  {% for file in css %}
-  <link rel="stylesheet" href="/assets/styles/{{ file }}">
-  {% endfor %}
-  {% else %}
-  <link rel="stylesheet" href="/assets/styles/{{ css }}">
-  {% endif %}
-  {% else %}
-  {% assign slug = page.fileSlug | append: ".css" %}
-  <link rel="stylesheet" href="/assets/styles/{{ slug }}">
-  {% endif %}
-
-  <link rel="stylesheet" href="/assets/styles/base/footer.css">
   <link rel="icon" sizes="16x16 24x24 32x32 64x64" href="/assets/images/favicon.ico">
 
   <script src="/assets/js/menu.js" defer></script>
-  {% if js %}
-  {% if js.first %}
-  {% for file in js %}
-  <script src="/assets/js/{{ file }}" defer></script>
-  {% endfor %}
-  {% else %}
-  <script src="/assets/js/{{ js }}" defer></script>
-  {% endif %}
-  {% endif %}
+  <script src="/assets/js/slide.js" defer></script>
 </head>
 {{ content }}
 

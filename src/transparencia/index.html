@@ -2,9 +2,24 @@
 layout: head.html
 title: Transparência — Instituto Refaz
 siteDescription: Confira as prestações de contas e a transparência do Instituto Refaz. Nosso compromisso é com a responsabilidade e a confiança.
-css: "transparencia.css"
 ---
 
+{% css %}
+{{ '/assets/styles/base/_reset.css' | read }}
+{{ '/assets/styles/base/_variables.css' | read }}
+{{ '/assets/styles/base/_typography.css' | read }}
+
+{{ '/assets/styles/layout/_spacing.css' | read }}
+{{ '/assets/styles/layout/_header.css' | read }}
+{{ '/assets/styles/layout/_main.css' | read }}
+{{ '/assets/styles/layout/_footer.css' | read }}
+
+{{ '/assets/styles/components/_buttons.css' | read }}
+{{ '/assets/styles/components/_table.css' | read }}
+
+{{ '/assets/styles/pages/_transparencia.css' | read }}
+{{ '/assets/styles/base/_utilities.css' | read }}
+{% endcss %}
 
 <body class="espacamento-primario">
   {% include "header.html" %}

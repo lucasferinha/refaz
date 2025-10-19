@@ -1,0 +1,84 @@
+/* ===== SISTEMA DE ESPAÇAMENTO ===== */
+.texto-conteudo {
+  --space-base: 16px;
+  --space-compact: 8px;
+  --space-list: 12px;
+
+  & > * {
+    margin-bottom: var(--space-base);
+  }
+
+  & > :is(p, h1, h2, h3, h4, h5, h6, blockquote) {
+    margin-bottom: var(--space-compact);
+  }
+
+  & > :is(ul, ol) li,
+  & > :is(.postagem__poster, .btn) {
+    margin-bottom: var(--space-list);
+  }
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* ===== SISTEMA DE ESPAÇAMENTO → Página única ===== */
+.texto-conteudo--pagina {
+  --space-base: 16px;
+  --space-compact: 8px;
+  --space-list: 12px;
+  --space-title-mobile: 32px;
+  --space-title-desktop: 48px;
+  --space-subtitle: 24px;
+
+  /* Reset base */
+  & > * {
+    margin-bottom: var(--space-base);
+    margin-top: 0;
+  }
+
+  /* Elementos compactos */
+  & > :is(p, blockquote) {
+    margin-bottom: var(--space-compact);
+  }
+
+  /* Listas e componentes */
+  & > :is(ul, ol) li,
+  & > :is(.postagem__poster, .btn) {
+    margin-bottom: var(--space-list);
+  }
+
+  /* ===== SISTEMA DE TÍTULOS ===== */
+  /* Regra geral para títulos seguidos de conteúdo */
+  & > :is(h1, h2, h3, h4, h5, h6) {
+    margin-bottom: var(--space-compact);
+  }
+
+  /* H2 com espaçamento superior amplo se NÃO precededido por título */
+  & > h2:not(:is(h1, h2, h3, h4, h5, h6) + *) {
+    margin-top: var(--space-title-mobile);
+
+    @media (min-width: 768px) {
+      margin-top: var(--space-title-desktop);
+    }
+  }
+
+  /* H3, H4, H5 com espaçamento reduzido (mesma seção) */
+  & > :is(h3, h4, h5) {
+    margin-top: var(--space-subtitle);
+  }
+
+  /* Títulos precedidos por outros títulos - espaçamento reduzido */
+  & > :is(h1, h2, h3, h4, h5, h6) + :is(h2, h3, h4, h5, h6) {
+    margin-top: var(--space-subtitle);
+  }
+
+  /* Remove espaçamento superior do primeiro elemento */
+  & > *:first-child {
+    margin-top: 0;
+  }
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+}
