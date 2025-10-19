@@ -23,14 +23,25 @@
 
 .cabecalho {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   padding: 10px 0;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  place-self: center;
+  max-width: 47px;
+
+  @media (min-width: 1200px) {
+    max-width: 80px;
+  }
 }
 
 .nav__list {
   display: flex;
   gap: 16px;
+  justify-content: space-between;
 }
 
 .nav__link {
@@ -88,6 +99,7 @@
     flex-direction: column;
     padding: 22px 0px 10px;
     gap: 10px;
+    align-items: normal;
   }
 }
 

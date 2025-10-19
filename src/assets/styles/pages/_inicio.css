@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
+  align-items: center;
   gap: 16px;
 }
 
@@ -13,7 +14,6 @@
   }
   .introducao img {
     order: 2;
-    place-self: stretch;
     object-fit: cover;
   }
 }

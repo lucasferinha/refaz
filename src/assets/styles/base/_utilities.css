@@ -107,15 +107,6 @@ blockquote {
   border-left: 3px solid var(--cor-primaria);
 }
 
-/* Logo */
-.logo {
-  max-width: 47px;
-
-  @media (min-width: 1200px) {
-    max-width: 87px;
-  }
-}
-
 /* Lista */
 .lista-padrao {
   list-style-type: square;
