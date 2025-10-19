@@ -46,6 +46,16 @@
   }
 }
 
+.small {
+  display: block;
+  font-size: var(--size-xs);
+  line-height: 1.4;
+
+  @media (min-width: 768px) {
+    max-width: 39ch;
+  }
+}
+
 /* Marcadores */
 .marca {
   display: inline-block;

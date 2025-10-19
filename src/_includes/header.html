@@ -1,12 +1,15 @@
 <header id="header" class="header container">
     <div class="cabecalho">
-        <a aria-label="Página Inicial" class="logo" href="/"><img src="/assets/images/logo-Instituto-refaz.svg" alt="Logo do Instituto Refaz" width="87" height="87" loading="eager" fetchpriority="high"></a>
-        <!-- Botão hamburguer (aparece só no mobile) -->
+        <a aria-label="Página Inicial" class="logo" href="/">
+            <img src="/assets/images/logo-Instituto-refaz.svg" alt="Logo do Instituto Refaz" width="87" height="87" loading="eager" fetchpriority="high">
+        </a>
+
+        <!-- Botão hamburguer / fechar -->
         <button aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menu" class="cabecalho__menu-toggle">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3.75 6.75H20.25M3.75 12H20.25M3.75 17.25H20.25" stroke="#246DB4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
+            <img src="/assets/images/menu.svg" alt="" class="icone-menu icone-menu--abrir" width="24" height="24">
+            <img src="/assets/images/x.svg" alt="" class="icone-menu icone-menu--fechar" width="24" height="24">
         </button>
+
         <!-- Menu de navegação -->
         <nav class="cabecalho__nav nav" id="menu-principal" aria-label="Menu principal">
             <ul class="nav__list">

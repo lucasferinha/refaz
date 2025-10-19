@@ -90,3 +90,26 @@
   flex-wrap: wrap;
   gap: 8px 8px;
 }
+
+.marcacoes__item {
+  color: #464646;
+  background-color: #e0e0e0;
+  display: inline-block;
+  font-size: var(--size-xs);
+  padding: 4px 8px;
+  font-family: var(--fonte-titulo);
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: var(--raio-borda);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.marcacoes__item:hover {
+  background-color: #323232;
+  color: #f0f0f0;
+}
+
+.marcacoes__item a {
+  color: inherit;
+}

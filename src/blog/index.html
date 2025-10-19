@@ -44,7 +44,7 @@ siteDescription: Acompanhe as novidades, eventos e histórias inspiradoras do In
           <ul class="marcacoes__lista">
             {% for tag in i.data.tags %}
             {% if tag != "posts" %}
-            <li class="marcacoes__item">{{ tag }}</li>
+            <li class="marcacoes__item"><a href="/tags/{{ tag }}">{{ tag }}</a></li>
             {% endif %}
             {% endfor %}
           </ul>
