@@ -155,8 +155,6 @@ return mensagem
 
 \`\`\`html
 
-Exemplo
-
 # Hello World
 
 \`\`\`
@@ -242,15 +240,3 @@ $$
 \\int\_{-\\infty}^{\\infty} e^{-x^2} dx = \\sqrt{\\pi}
 
 $$
-
-\---
-
-\## 🏷️ Tags
-
-\`markdown\` \`teste\` \`documentação\` \`guia\` \`sintaxe\` \`formatação\` \`tutorial\` \`exemplos\` \`web\` `desenvolvimento`
-
-\---
-
-_Última atualização: {{DATA\_ATUAL}}_
-
-_Este documento foi criado para fins de teste e referência._
