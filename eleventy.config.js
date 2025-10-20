@@ -12,6 +12,7 @@ const config = JSON.parse(fs.readFileSync("src/_data/config.json", "utf8"));
 
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/");
+  eleventyConfig.addPassthroughCopy("src/robots.txt");
 
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   eleventyConfig.addBundle("css", {
