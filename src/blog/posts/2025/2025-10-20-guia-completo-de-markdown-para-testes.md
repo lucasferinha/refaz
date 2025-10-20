@@ -62,10 +62,10 @@ tags:
 
 ## 🖼️ Imagens e Mídia
 
-![Imagem de exemplo](https://via.placeholder.com/400x200 "Título da imagem")
+![Imagem de exemplo](https://images.unsplash.com/photo-1746483965671-44ed1704e4fd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=388 "Título da imagem")
 
 **Imagem com link:**
-[![Placeholder Image](https://via.placeholder.com/200x100)](https://www.exemplo.com)
+[![Placeholder Image](https://images.unsplash.com/photo-1746483965671-44ed1704e4fd?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=388)](https://www.exemplo.com)
 
 ---
 
