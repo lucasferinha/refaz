@@ -1,6 +1,6 @@
 ---
 published: true
-title: 🧪 Guia Completo de Markdown para Testes
+title: Guia Completo de Markdown para Testes
 siteDescription: Um documento abrangente com todos os elementos Markdown para
   fins de teste e referência. Ideal para desenvolvedores, escritores e qualquer
   pessoa que queira explorar as capacidades dessa linguagem de marcação simples.
@@ -92,7 +92,7 @@ _Texto em itálico_
 
 **Imagem com link:**
 
-\[!\[Placeholder Image\]([https://via.placeholder.com/200x100)\](https://www.exemplo.com)](https://via.placeholder.com/200x100\)]\(https://www.exemplo.com\))
+\[!\[Placeholder Image\]([https://via.placeholder.com/200x100)\](https://www.exemplo.com)](https://via.placeholder.com/200x100\)%5D\(https://www.exemplo.com\))
 
 \---
 
@@ -154,23 +154,9 @@ return mensagem
 
 \`\`\`html
 
-<!DOCTYPE html>
+Exemplo
 
-<html>
-
-<head>
-
-<title>Exemplo</title>
-
-</head>
-
-<body>
-
-<h1>Hello World</h1>
-
-</body>
-
-</html>
+# Hello World
 
 \`\`\`
 
@@ -228,9 +214,7 @@ Termo 2
 
 \### Detalhes/Sumário
 
-<details>
-
-<summary>Clique para expandir</summary>
+Clique para expandir
 
 Conteúdo oculto que aparece quando expandido. Pode conter:
 
@@ -245,8 +229,6 @@ Conteúdo oculto que aparece quando expandido. Pode conter:
 console.log("Exemplo expandido");
 
 \`\`\`
-
-</details>
 
 \### Matemática (quando suportado)
 
