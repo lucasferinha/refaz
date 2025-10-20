@@ -1,15 +1,14 @@
 media:
   input: src/assets/images
   output: /assets/images
-  use_relative_path: true
 
 content:
   - name: posts
     label: Posts
     type: collection
     path: src/blog/posts
-    media_folder: ""
-    public_folder: ""
+    media_folder: "" # deixa vazio para usar pasta do post
+    public_folder: "" # deixa vazio também
     view:
       fields: [title, published, date, tags]
     fields:
@@ -25,16 +24,3 @@ content:
           max: 5
           collapsible: false
       - { name: body, label: Body, type: text }
-
-  - name: config
-    label: Site settings
-    type: file
-    path: src/_data/config.json
-    fields:
-      - { name: siteName, label: Site Name, type: string }
-      - { name: siteURL, label: Site URL, type: string }
-      - { name: siteAuthor, label: Site Author, type: string }
-      - { name: siteLang, label: Site Language, type: string }
-      - { name: authorLink, label: Author Link, type: string }
-      - { name: authorContact, label: Author Contact, type: string }
-      - { name: siteSubDir, label: Site SubDir, type: string }
