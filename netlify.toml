@@ -1,3 +1,13 @@
+[build]
+  command = "npm run build"
+  publish = "_site"
+
+[build.environment]
+  NODE_ENV = "production"
+  NODE_VERSION = "20"
+  ELEVENTY_IMAGE_CACHE_DIR = "none"
+  ELEVENTY_FETCH_CACHE = "false"
+
 [[redirects]]
   from = "/index.html"
   to = "/"
@@ -8,26 +18,37 @@
   for = "/assets/images/*"
   [headers.values]
   Cache-Control = "public, immutable, max-age=31536000"
+  Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
 
 [[headers]]
   for = "/assets/fonts/*"
   [headers.values]
   Cache-Control = "public, immutable, max-age=31536000"
+  Link = "</assets/fonts/your-font.woff2>; rel=preload; as=font; type='font/woff2'; crossorigin=anonymous"
+  Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
 
 [[headers]]
   for = "/*.css"
   [headers.values]
   Cache-Control = "public, max-age=86400"
+  Link = "</assets/styles/base.css>; rel=preload; as=style"
+  Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+  Content-Encoding = "br"
 
 [[headers]]
   for = "/*.js"
   [headers.values]
   Cache-Control = "public, max-age=86400"
+  Link = "</assets/scripts/main.js>; rel=preload; as=script"
+  Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+  Content-Encoding = "br"
 
 [[headers]]
   for = "/*.html"
   [headers.values]
   Cache-Control = "public, max-age=0, must-revalidate"
+  Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+  Content-Encoding = "br"
 
 [[headers]]
   for = "/*"
@@ -37,3 +58,12 @@
   X-Content-Type-Options = "nosniff"
   Referrer-Policy = "strict-origin-when-cross-origin"
   Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+  Content-Security-Policy = """
+    default-src 'self';
+    script-src 'self';
+    style-src 'self' 'unsafe-inline';
+    img-src 'self' data:;
+    font-src 'self';
+    frame-ancestors 'none';
+    object-src 'none';
+  """
