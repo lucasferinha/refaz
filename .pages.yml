@@ -16,7 +16,8 @@ content:
       - { name: published, label: Published, type: boolean, default: true }
       - { name: date, label: Date, type: date }
       - { name: title, label: Title, type: string }
-      - { name: description, label: Description, type: string }
+      - { name: siteDescription, label: Description, type: string }
+      - { name: tags, label: Tags, type: list, summary: '{{fields.item}}', hint: "Adicione palavras-chave separadas (ex: missão, história, voluntariado)" }
       - { name: body, label: Body, type: rich-text }
 
   - name: config
