@@ -7,6 +7,7 @@ siteDescription: Um documento abrangente com todos os elementos Markdown para
 date: 2025-10-20
 tags:
   - markdown
+  - legal
 ---
 \## 📝 Elementos Básicos de Texto
 
