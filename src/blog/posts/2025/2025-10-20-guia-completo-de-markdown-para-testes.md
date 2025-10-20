@@ -19,6 +19,10 @@ tags:
 ##### H5 - Subtópico
 ###### H6 - Item menor
 
+https://www.instagram.com/p/DPCGw96jrtz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==
+
+https://youtu.be/JL2QU7dr9vg?si=jNmtW_vNEZATPWpL
+
 ### Ênfase de Texto
 **Texto em negrito**  
 *Texto em itálico*  
@@ -27,7 +31,6 @@ tags:
 `Texto em linha de código`
 
 ### Listas
-
 #### Lista Não Ordenada
 - Item de lista 1
 - Item de lista 2

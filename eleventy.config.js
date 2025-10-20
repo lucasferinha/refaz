@@ -7,6 +7,7 @@ import postcss from "postcss";
 import postcssImport from "postcss-import";
 import autoprefixer from "autoprefixer";
 import cssnano from "cssnano";
+import embedEverything from "eleventy-plugin-embed-everything";
 
 const config = JSON.parse(fs.readFileSync("src/_data/config.json", "utf8"));
 
@@ -15,6 +16,24 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/robots.txt");
 
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+  eleventyConfig.addPlugin(embedEverything, {
+    use: ["youtube", "instagram"],
+    youtube: {
+      options: {
+        lite: {
+          css: {
+            inline: true,
+          },
+          js: {
+            inline: true,
+          },
+          thumbnailFormat: "webp",
+          thumbnailQuality: "hqdefault",
+          responsive: false,
+        },
+      },
+    },
+  });
   eleventyConfig.addBundle("css", {
     outputFileExtension: "css",
     toFileDirectory: "assets/styles", // destino do bundle em _site/
