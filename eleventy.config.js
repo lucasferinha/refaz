@@ -7,7 +7,6 @@ import postcss from "postcss";
 import postcssImport from "postcss-import";
 import autoprefixer from "autoprefixer";
 import cssnano from "cssnano";
-import markdownIt from "markdown-it";
 
 const config = JSON.parse(fs.readFileSync("src/_data/config.json", "utf8"));
 
@@ -16,13 +15,6 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/robots.txt");
 
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
-  const markdownLib = markdownIt({
-    html: true, // permite HTML dentro do .md
-    breaks: true, // quebra linha automática
-    linkify: true, // transforma URL em link
-  });
-  eleventyConfig.setLibrary("md", markdownLib);
-
   eleventyConfig.addBundle("css", {
     outputFileExtension: "css",
     toFileDirectory: "assets/styles", // destino do bundle em _site/
