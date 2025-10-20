@@ -1,38 +1,15 @@
 media:
   input: src/assets/images
   output: /assets/images
+  use_relative_path: true
 
 content:
   - name: posts
     label: Posts
     type: collection
     path: src/blog/posts
-    view:
-      fields: [title, published, date]
-    fields:
-      - { name: published, label: Published, type: boolean, default: true }
-      - { name: date, label: Date, type: date }
-      - { name: title, label: Title, type: string }
-      - { name: description, label: Description, type: string }
-      - { name: body, label: Body, type: rich-text }
-
-  - name: info
-    label: Info
-    type: collection
-    path: src/blog/info
-    view:
-      fields: [title, published, date]
-    fields:
-      - { name: published, label: Published, type: boolean, default: true }
-      - { name: date, label: Date, type: date }
-      - { name: title, label: Title, type: string }
-      - { name: description, label: Description, type: string }
-      - { name: body, label: Body, type: rich-text }
-
-  - name: minifeeds
-    label: MiniFeeds
-    type: collection
-    path: src/blog/minifeeds
+    media_folder: ""
+    public_folder: ""
     view:
       fields: [title, published, date]
     fields:

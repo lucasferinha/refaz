@@ -31,4 +31,4 @@ Legalizar o Instituto é **garantir que cada criança continue a ter oportunidad
 
 **Sua doação para a quitação do CNPJ é um investimento direto no futuro de dezenas de crianças e adolescentes.**
 
-[**Doe agora e faça parte desta virada de chave. Juntos, somos mais fortes!**](/como-ajudar)
+[**Doe agora e faça parte desta virada de chave. Juntos, somos mais fortes!**](/como-ajudar/#doarcnpj)

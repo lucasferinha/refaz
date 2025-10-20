@@ -55,7 +55,7 @@ a,
 input,
 button {
   &:focus {
-    outline: 5px solid #f44336;
+    outline: 4px solid #ff7800;
     outline-offset: 4px;
     border-radius: 0;
   }

@@ -7,11 +7,22 @@
   gap: 16px;
 }
 
+.introducao__botoes {
+  display: grid;
+  gap: 12px;
+}
+
 @media (min-width: 1100px) {
   .introducao {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
   }
+
+  /* .introducao__botoes {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  } */
+
   .introducao img {
     order: 2;
     object-fit: cover;

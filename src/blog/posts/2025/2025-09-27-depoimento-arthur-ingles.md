@@ -27,4 +27,4 @@ Depoimentos como o do Arthur são possíveis graças ao trabalho incansável de 
 
 **É a colaboração em ação, transformando vidas uma palavra, um sonho, de cada vez.**
 
-[**Você também pode ser um agente de transformação. Seja um voluntário!**](/seja-voluntario)
+[**Você também pode ser um agente de transformação. Seja um voluntário!**](/como-ajudar/#voluntario)
