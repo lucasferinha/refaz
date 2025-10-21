@@ -1,7 +1,7 @@
 <footer id="footer" class="" role="contentinfo">
   <div class="footer container">
     <a aria-label="Página Inicial" class="logo" href="/"><img src="/assets/images/logo-Instituto-refaz.svg" alt="Logo do Instituto Refaz"></a>
-    <p><em>"Transformando Vidas com Educação, Esporte e Esperança"</em></p>
+    <p class="footer_citacao"><em>"Transformando Vidas com Educação, Esporte e Esperança"</em></p>
     <div class="footer__acima">
       <a href="/como-ajudar/#doarcnpj" class="btn --primario">Doação ao CNPJ</a>
       <a href="/#newsletter" class="btn --secundario">Assine newsletter</a>
@@ -36,14 +36,17 @@
     </div>
     <hr>
     <div class="footer__abaixo">
-      <a href="#">Política de privacidade</a>
+      <a href="/politica-e-privacidade/">Política de privacidade</a>
     </div>
   </div>
   <div class="end">
-    <p>© 2025 Instituto Refaz — Todos os direitos reservados.</p>
     <figure class="end__imagem">
-      <img src="/assets/images/javali.svg" alt="Mascote javali" width="100" height="100">
+      <img eleventy:ignore src="/assets/images/logo-ferinha.svg" alt="O logotipo do desenvolvedor que criou este site: é o rosto de um javali." width="50" height="50">
+      <figcaption>Desenvolvido por <a href="https://www.instagram.com/lucax.ui/" target="_blank" rel="noopener">Ferinha</a></figcaption>
     </figure>
-    <p class="credito">Desenvolvido por <a href="https://www.instagram.com/lucax.ui/" target="_blank" rel="noopener">Ferinha</a></p>
+    <p>© <span id="ano"></span> Instituto Refaz — Todos os direitos reservados.</p>
   </div>
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
 </footer>

@@ -2,13 +2,26 @@
 #footer {
   background-color: var(--cor-rodape);
   color: var(--cor-texto-rodape);
+
+  --footer-space: 24px;
+  @media (min-width: 768px) {
+    --footer-space: 32px;
+  }
 }
 
 .footer {
   display: flex;
   flex-direction: column;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: var(--footer-space);
+  padding-bottom: var(--footer-space);
+}
+
+.footer hr {
+  margin-top: var(--footer-space);
+  margin-bottom: var(--footer-space);
+  height: 1px;
+  border: none;
+  background-color: #2267a9;
 }
 
 .footer .logo {
@@ -16,7 +29,7 @@
   margin-bottom: 24px;
 }
 
-.footer p {
+.footer .footer_citacao {
   place-self: center;
   font-size: var(--size-lg);
   line-height: 1.5;
@@ -33,14 +46,6 @@
     flex-direction: row;
     gap: 40px;
   }
-}
-
-.footer hr {
-  margin-top: 48px;
-  margin-bottom: 48px;
-  height: 1px;
-  border: none;
-  background-color: #2267a9;
 }
 
 .footer__meio {
@@ -106,18 +111,31 @@
 }
 
 .end {
-  padding: 20px;
+  padding-top: var(--footer-space);
+  padding-bottom: var(--footer-space);
   color: var(--cor-texto);
   background-color: var(--cor-fundo);
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 12px;
 }
 
-.end__imagem img {
-  max-width: 100px;
+.end__imagem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
 }
 
-.credito {
+.end__imagem figcaption {
+  font-size: var(--size-xs);
+}
+
+.end__imagem figcaption a {
+  color: #000;
+}
+
+.end p {
   font-size: var(--size-xs);
 }

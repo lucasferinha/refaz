@@ -32,7 +32,6 @@ layout: head.html
         {{ content }}
     </main>
 
-    <hr>
     {% assign previousPost = collections.posts | getPreviousCollectionItem %}
     {% assign nextPost = collections.posts | getNextCollectionItem %}
     {% if previousPost or nextPost %}
@@ -69,7 +68,6 @@ layout: head.html
     </nav>
     {% endif %}
 
-    <hr>
     {% include "footer.html" %}
 
 </body>

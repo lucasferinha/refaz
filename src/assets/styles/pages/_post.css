@@ -91,6 +91,16 @@ main li:nth-child(even)::marker {
   color: #246db4;
 }
 
+#pagination {
+  --top-and-bottom: 32px;
+  padding-top: var(--top-and-bottom);
+  padding-bottom: var(--top-and-bottom);
+
+  @media (min-width: 604px) {
+    --top-and-bottom: 48px;
+  }
+}
+
 .pagination__lista {
   display: grid;
   grid-template-columns: 1fr 1fr;

@@ -19,7 +19,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-image: url("/assets/images/inflicted.png");
+  background-image: url("/assets/images/ui/inflicted.png");
   background-repeat: repeat;
   background-size: 300px;
   opacity: 0.07;
