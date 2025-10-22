@@ -38,10 +38,9 @@ Site institucional do **Instituto Refaz**, uma organização não governamental 
   ```
 
 2. **Instale as dependências**
-
    ```bash
    npm install
-   ```
+  ```
 
 3. **Configure o ambiente**
 
@@ -62,7 +61,6 @@ Site institucional do **Instituto Refaz**, uma organização não governamental 
 ## Estrutura do Projeto
 
 ```
-instituto-refaz/
 instituto-refaz/
 ├── src/
 │   ├── _data/                   # Dados globais (config.json)
