@@ -16,6 +16,10 @@
   padding-bottom: var(--footer-space);
 }
 
+.footer a:hover {
+  background-color: #0e467d;
+}
+
 .footer hr {
   margin-top: var(--footer-space);
   margin-bottom: var(--footer-space);

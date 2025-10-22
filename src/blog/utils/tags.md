@@ -9,7 +9,7 @@ pagination:
 permalink: /tags/{{ tag }}/
 layout: layout.html
 eleventyComputed:
-  title: <strong>{{ tag }}</strong>
+  title: Categoria - {{ tag }}
 ---
 
 {% css %}
