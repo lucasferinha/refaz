@@ -2,7 +2,7 @@
 
 [![Eleventy](https://img.shields.io/badge/v3.1.2-000000?style=flat&logo=eleventy&logoColor=white&label=Eleventy&labelColor=000000&color=%23ffffff)](https://www.11ty.dev/) 
 [![Node.js](https://img.shields.io/badge/v22.18.0-000000?style=flat&logo=node.js&logoColor=white&label=Node.js&labelColor=069c0e&color=%23ffffff)](https://nodejs.org/) 
-[![License: MIT](https://badgen.net/#static/license/MIT/orange)](https://opensource.org/licenses/MIT) 
+[![License: MIT](https://img.shields.io/badge/License-MIT-orange)](https://opensource.org/licenses/MIT) 
 
 Site institucional do **Instituto Refaz**, uma organização não governamental que transforma vidas por meio do esporte e da educação no Rio de Janeiro.
 
@@ -65,6 +65,5 @@ O conteúdo é gerenciado através do **Pages CMS**. Para criar novos posts, ace
 O site é automaticamente publicado via **Netlify** quando há alterações na branch `main`.
 
 ---
-
-**Desenvolvedor:** Ferinha  
+ 
 Desenvolvido com 🤞🏻 para transformar vidas

@@ -53,11 +53,20 @@ siteDescription: Estamos sempre dispostos a receber novas ideias, voluntários, 
       </blockquote>
 
       <h3 class="titulo --3">Encontre-nos no Mapa</h3>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d470400.738485953!2d-43.775640818838596!3d-22.913158042919136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bde559108a05b%3A0x50dc426c672fd24e!2sRio%20de%20Janeiro%2C%20RJ!5e0!3m2!1spt-BR!2sbr!4v1760627943451!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div id="map"></div>
     </section>
 
     {% include "newsletter.html" %}
   </main>
 
   {% include "footer.html" %}
+  <script>
+    var map = L.map('map').setView([-22.980877776237108, -43.19203548988972], 16)
+    var marker = L.marker([-22.980877776237108, -43.19203548988972]).addTo(map);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+  </script>
 </body>
