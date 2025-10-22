@@ -35,7 +35,7 @@ Site institucional do **Instituto Refaz**, uma organização não governamental 
    ```bash
    git clone https://github.com/seu-usuario/instituto-refaz.git
    cd instituto-refaz
-````
+  ```
 
 2. **Instale as dependências**
 
