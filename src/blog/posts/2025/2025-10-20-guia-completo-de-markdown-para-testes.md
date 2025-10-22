@@ -6,8 +6,8 @@ siteDescription: Um documento abrangente com todos os elementos Markdown para
   pessoa que queira explorar as capacidades dessa linguagem de marcação simples
 date: 2025-10-20
 tags:
-  - Markdown
-  - Educação
+  - markdown
+  - educação
 ---
 ## 📝 Elementos Básicos de Texto
 
