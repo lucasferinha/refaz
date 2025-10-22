@@ -3,16 +3,21 @@ permalink: /sitemap.xml
 eleventyExcludeFromCollections: true
 layout: null
 ---
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {% assign base = config.siteURL %}
   {% for page in collections.all %}
-    {% if page.url and page.url != '/feed.xml' and page.url != '/sitemap.xml' %}
+    {% if page.url 
+      and page.data.draft != true
+      and page.url != '/feed.xml'
+      and page.url != '/sitemap.xml'
+      and page.data.eleventyExcludeFromSitemap != true
+    %}
       <url>
         <loc>{{ base }}{{ page.url | url }}</loc>
-        <lastmod>{{ page.date | date: "%Y-%m-%d" }}</lastmod>
-        <changefreq>{% if page.url == '/' %}weekly{% else %}monthly{% endif %}</changefreq>
-        <priority>{% if page.url == '/' %}1.0{% else %}0.7{% endif %}</priority>
+        {% if page.date %}
+          <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+        {% endif %}
       </url>
     {% endif %}
   {% endfor %}

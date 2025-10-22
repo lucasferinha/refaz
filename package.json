@@ -1,17 +1,15 @@
 {
-  "name": "strawberry-starter",
+  "name": "instituto-refaz",
   "version": "1.1.0",
-  "description": "a simply sweet blog template",
+  "description": "transformando vidas com esporte e educacao",
   "main": "index.js",
   "scripts": {
     "start": "npm run dev",
     "dev": "rimraf _site/ && npx @11ty/eleventy --serve --port 1234",
-    "build": "rimraf _site/ && npx @11ty/eleventy",
-    "upload": "npm run build && node _functions/upload-neo.js",
-    "backup": "rimraf _backup/ && node _functions/back-up.js"
+    "build": "rimraf _site/ && npx @11ty/eleventy"
   },
   "keywords": [],
-  "author": "Kate Bagenzo",
+  "author": "Ferinha",
   "license": "MIT",
   "dependencies": {
     "@11ty/eleventy": "3.1.0-beta.1",
