@@ -16,11 +16,18 @@ content:
       - { name: title, label: Title, type: string }
       - { name: siteDescription, label: Description, type: string }
       - { name: date, label: Date, type: date }
+      
       - name: tags
         label: Tags
-        type: string
-        list:
-          min: 1
-          max: 5
-          collapsible: false
+        type: select
+        options:
+          creatable: true
+          multiple: true
+          values: [sustentabilidade, jiu-jitsu, aula de inglês, educação, voluntariado, inclusão social, depoimento, inglês, legalização, transparência, políticas públicas, esporte, missão, história]
+          
+      - name: cover
+        label: Cover Image
+        type: image
+        required: false
+        
       - { name: body, label: Body, type: text }
