@@ -7,8 +7,8 @@ button[type="submit"] {
   text-align: center;
   text-transform: uppercase;
   padding: 14px 28px;
-  background-color: var(--cor-primaria);
-  color: var(--cor-fundo-claro);
+  background-color: var(--azul);
+  color: var(--branco);
   width: 100%;
   border-radius: var(--raio-borda);
   box-shadow: var(--sombra-suave);
@@ -16,7 +16,7 @@ button[type="submit"] {
   transition: all 0.3s;
 
   &:hover {
-    background-color: var(--cor-primaria-escura);
+    background-color: var(--azul-escuro);
   }
 
   @media (min-width: 768px) {

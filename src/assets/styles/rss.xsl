@@ -51,6 +51,10 @@ exclude-result-prefixes="atom"
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
+        header a {
+            color: #2267a9;
+        }
+
         header h1 {
             color: #333333;
             margin-bottom: 0.5rem;
@@ -141,18 +145,6 @@ exclude-result-prefixes="atom"
             color: #666;
             border-top: 1px solid #ddd;
             margin-top: 2rem;
-        }
-
-        /* Acessibilidade - Skip link */
-        .skip-link {
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: #2c5530;
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            z-index: 1000;
         }
 
         /* Reduced motion */

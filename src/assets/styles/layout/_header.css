@@ -14,10 +14,10 @@
 
 /* Quando visível, garante posição fixa no topo */
 .header {
-  background-color: var(--cor-fundo);
+  background-color: var(--branco-200);
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 1001;
   transition: transform 0.3s ease;
 }
 
@@ -54,7 +54,7 @@
   padding: 12px 10px;
 
   &:hover {
-    color: var(--cor-primaria-escura);
+    color: var(--azul-escuro);
   }
 
   @media (min-width: 1300px) {
@@ -115,7 +115,7 @@
     height: 100%;
     width: 100%;
     overflow-y: auto;
-    background-color: var(--cor-fundo);
+    background-color: var(--branco-200);
     transform: translateY(100%);
     opacity: 0;
     transition: transform 0.3s ease, opacity 0.3s ease;
@@ -144,13 +144,4 @@
   body.menu-aberto {
     overflow: hidden;
   }
-}
-
-/* Foco e acessibilidade */
-.cabecalho__nav {
-  outline: none;
-}
-.cabecalho__nav:focus-visible {
-  outline: 2px solid var(--cor-primaria);
-  outline-offset: 4px;
 }

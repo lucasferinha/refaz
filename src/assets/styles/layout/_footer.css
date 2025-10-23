@@ -1,7 +1,7 @@
 /* Footer */
 #footer {
-  background-color: var(--cor-rodape);
-  color: var(--cor-texto-rodape);
+  background-color: var(--azul-400);
+  color: var(--branco);
 
   --footer-space: 24px;
   @media (min-width: 768px) {
@@ -17,7 +17,7 @@
 }
 
 .footer a:hover {
-  background-color: #0e467d;
+  background-color: var(--azul-escuro);
 }
 
 .footer hr {
@@ -25,7 +25,7 @@
   margin-bottom: var(--footer-space);
   height: 1px;
   border: none;
-  background-color: #2267a9;
+  background-color: var(--azul-medio);
 }
 
 .footer .logo {
@@ -117,8 +117,8 @@
 .end {
   padding-top: var(--footer-space);
   padding-bottom: var(--footer-space);
-  color: var(--cor-texto);
-  background-color: var(--cor-fundo);
+  color: var(--cinza-medio);
+  background-color: var(--branco-200);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -137,7 +137,7 @@
 }
 
 .end__imagem figcaption a {
-  color: #000;
+  color: var(--preto);
 }
 
 .end p {

@@ -1,7 +1,7 @@
 hr {
   border: none;
   height: 2px;
-  background-color: #f0f0f0;
+  background-color: var(--branco-quase);
   margin-top: 24px;
   margin-bottom: 24px;
 
@@ -13,10 +13,14 @@ hr {
 
 /* Âncoras */
 main a {
-  color: #333;
+  color: var(--cinza-medio);
   font-weight: 400;
   text-decoration: underline;
   font-style: italic;
+
+  &:hover {
+    color: var(--azul);
+  }
 }
 
 /* Hierarquia de títulos */
@@ -61,7 +65,7 @@ blockquote {
 blockquote {
   font-style: italic;
   padding: 0 0 0 10px;
-  border-left: 3px solid var(--cor-primaria);
+  border-left: 3px solid var(--azul);
 }
 
 /* Lista */
@@ -84,11 +88,11 @@ main li {
 }
 
 main li::marker {
-  color: #f58634;
+  color: var(--laranja);
 }
 
 main li:nth-child(even)::marker {
-  color: #246db4;
+  color: var(--azul);
 }
 
 #pagination {
@@ -113,7 +117,7 @@ main li:nth-child(even)::marker {
 
 .pagination__item a {
   padding: 4px 14px;
-  color: #333;
+  color: var(--cinza-medio);
 }
 
 .pagination-direction {

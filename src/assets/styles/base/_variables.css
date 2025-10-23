@@ -1,17 +1,23 @@
 :root {
-  /* Cores */
-  --cor-primaria: #246db4;
-  --cor-primaria-escura: #135291;
-  --cor-secundaria: #daebfd;
-  --cor-secundaria-escura: #c4d7eb;
-  --cor-texto: #333333;
-  --cor-texto-claro: #464646;
-  --cor-fundo: #fafafa;
-  --cor-fundo-claro: #f0f0f0;
-  --cor-fundo-escuro: #e6e6e6;
-  --cor-borda: #d2d2d2;
-  --cor-rodape: #0f4e8c;
-  --cor-texto-rodape: #fefefe;
+  /* Cores → Algumas, cores gerais */
+  --azul-100: #daebfd;
+  --azul-100-C2: #c4d7eb;
+  --azul: #246db4;
+  --azul-medio: #2267a9;
+  --azul-400: #0f4e8c;
+  --azul-escuro: #0e467d;
+  --azul-500: #244668;
+
+  --laranja: #f58634;
+
+  --preto: #000000;
+  --cinza-escuro: #323232;
+  --cinza-medio: #333333;
+  --cinza-suave: #464646;
+  --cinza-claro: #e0e0e0;
+  --branco-quase: #f0f0f0;
+  --branco-200: #fafafa;
+  --branco: #ffffff;
 
   /* Tipografia */
   --fonte-titulo: "Poppins", sans-serif;

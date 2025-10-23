@@ -7,11 +7,11 @@
 
 .equipe__voluntario {
   max-width: 170px;
-  background-color: #246db4;
+  background-color: var(--azul);
   display: flex;
   flex-direction: column;
   padding: 4px;
-  color: #fff;
+  color: var(--branco);
   text-align: center;
 }
 

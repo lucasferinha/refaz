@@ -10,7 +10,7 @@ h1 {
 }
 
 .tagged__titulo a {
-  color: #333333;
+  color: var(--cinza-medio);
   font-family: var(--fonte-titulo);
   font-size: var(--size-xxl);
   font-style: normal;
@@ -37,6 +37,6 @@ h1 {
   padding: 4px 8px;
   font-size: var(--size-xs);
   font-family: var(--fonte-titulo);
-  background-color: #e0e0e0;
-  color: #464646;
+  background-color: var(--cinza-claro);
+  color: var(--cinza-suave);
 }

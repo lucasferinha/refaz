@@ -36,10 +36,10 @@
 
     &.__link {
       text-decoration: underline;
-      color: var(--cor-texto);
+      color: var(--cinza-medio);
 
       &:hover {
-        color: var(--cor-primaria-escura);
+        color: var(--azul-escuro);
         text-decoration: line-through;
       }
     }
@@ -104,7 +104,7 @@ blockquote {
 blockquote {
   font-style: italic;
   padding: 0 0 0 10px;
-  border-left: 3px solid var(--cor-primaria);
+  border-left: 3px solid var(--azul);
 }
 
 /* Lista */
@@ -124,10 +124,10 @@ blockquote {
 
 /* Altera a cor do marcador padrão diretamente */
 .lista-padrao li::marker {
-  color: #f58634; /* Cor padrão para todos os marcadores */
+  color: var(--laranja); /* Cor padrão para todos os marcadores */
 }
 
 /* Sobrescreve a cor para itens pares */
 .lista-padrao li:nth-child(even)::marker {
-  color: #246db4;
+  color: var(--azul);
 }

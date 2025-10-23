@@ -37,7 +37,7 @@
 
 .noticia__item {
   padding: 10px 10px 30px 10px;
-  background-color: var(--cor-fundo-claro);
+  background-color: var(--branco-quase);
   display: flex;
   gap: 4px;
   flex-direction: column;
@@ -125,7 +125,7 @@
   cursor: grab;
   padding: 5px 0;
   gap: 8px;
-  background-color: var(--cor-fundo-escuro);
+  background-color: var(--azul-escuro);
 
   @media (min-width: 1000px) {
     padding: 10px 0;

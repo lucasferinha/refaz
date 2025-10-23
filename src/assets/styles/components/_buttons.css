@@ -11,6 +11,7 @@
   width: 100%;
   border-radius: var(--raio-borda);
   box-shadow: var(--sombra-suave);
+  cursor: pointer;
   transition: all 0.3s;
 
   @media (min-width: 768px) {
@@ -20,20 +21,20 @@
   }
 
   &.--primario {
-    background-color: var(--cor-primaria);
-    color: var(--cor-fundo);
+    background-color: var(--azul);
+    color: var(--branco-200);
 
     &:hover {
-      background-color: #2666a7;
+      background-color: var(--azul-medio);
     }
   }
 
   &.--secundario {
-    background-color: var(--cor-secundaria);
-    color: #244668;
+    background-color: var(--azul-100);
+    color: var(--azul-500);
 
     &:hover {
-      background-color: var(--cor-secundaria-escura);
+      background-color: var(--azul-100-C2);
     }
   }
 

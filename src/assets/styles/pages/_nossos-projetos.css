@@ -63,12 +63,12 @@
 
 .galeria__imagens img {
   width: 100%;
-  border: 4px solid #246db4;
+  border: 4px solid var(--azul);
   aspect-ratio: 1 / 1;
   object-fit: cover;
   display: block;
 
   @media (min-width: 1000px) {
-    border: 8px solid #246db4;
+    border: 8px solid var(--azul);
   }
 }

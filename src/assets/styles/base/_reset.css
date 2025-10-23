@@ -8,8 +8,8 @@
 }
 
 body {
-  background-color: var(--cor-fundo);
-  color: var(--cor-texto);
+  background-color: var(--branco-200);
+  color: var(--cinza-medio);
   font-family: var(--fonte-texto);
   max-width: 1366px;
   margin: auto;
@@ -55,7 +55,7 @@ a,
 input,
 button {
   &:focus {
-    outline: 4px solid #ff7800;
+    outline: 4px solid var(--laranja);
     outline-offset: 4px;
     border-radius: 0;
   }
