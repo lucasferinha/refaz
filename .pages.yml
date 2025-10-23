@@ -4,23 +4,90 @@ media:
 
 content:
   - name: posts
-    label: Posts
+    label: Postagens do Blog
     type: collection
     path: src/blog/posts
-    media_folder: "" # deixa vazio para usar pasta do post
-    public_folder: "" # deixa vazio também
     view:
       fields: [title, published, date, tags]
     fields:
-      - { name: published, label: Published, type: boolean, default: true }
-      - { name: title, label: Title, type: string }
-      - { name: siteDescription, label: Description, type: string }
-      - { name: date, label: Date, type: date }
-      - name: tags
-        label: Tags
+      - name: published 
+        label: Publicado
+        type: boolean 
+        default: true
+        description: Marque para publicar o post no site. Desmarque para manter como rascunho.
+
+      - name: title 
+        label: Título da Postagem
         type: string
-        list:
-          min: 1
-          max: 5
-          collapsible: false
-      - { name: body, label: Body, type: text }
+        description: Escreva um título claro e atrativo, que resuma o conteúdo.
+
+      - name: siteDescription 
+        label: Descrição (SEO)
+        type: string
+        description: Resuma o conteúdo em até 160 caracteres. Aparece no Google e ao compartilhar o link.
+
+      - name: date 
+        label: Data da Publicação
+        type: date
+        description: Defina a data de publicação do post.
+
+      - name: tags
+        label: Categorias
+        type: select
+        options:
+          creatable: true
+          multiple: true
+          values:
+            - sustentabilidade
+            - jiu-jitsu
+            - aula de inglês
+            - educação
+            - voluntariado
+            - inclusão social
+            - depoimento
+            - inglês
+            - legalização
+            - transparência
+            - políticas públicas
+            - esporte
+            - missão
+            - história
+        description: Selecione as categorias que representam o tema do post. Use sempre letras minúsculas.
+
+      - name: cover
+        label: Upload de Imagem
+        type: image
+        required: false
+        description: Envie a imagem e use o caminho no texto, por exemplo:![Descrição](/assets/images/nome-da-imagem.jpg).
+
+      - name: body 
+        label: Conteúdo do Post
+        type: text
+        description: Escreva o conteúdo completo usando Markdown.
+
+  - name: site
+    label: Configurações do Site
+    path: src/_data/config.json
+    type: file
+    fields:
+      - name: siteName
+        label: Nome do Site
+        type: string
+        description: Nome exibido no título do site e nos resultados de busca.
+
+      - name: authorContact
+        label: E-mail de Contato
+        type: string
+        description: Endereço de e-mail usado para contato oficial.
+
+      - name: siteURL
+        label: Endereço do Site (URL)
+        type: string
+        pattern: ^(https?:\/\/)?(www\.)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/[^\s]*)?$
+        description: Informe o endereço completo, por exemplo:https://institutorefaz.ong.br.
+
+      - name: authorLink
+        label: URL do Autor ou Organização
+        type: string
+        pattern: ^(https?:\/\/)?(www\.)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/[^\s]*)?$
+        description: Link para o perfil, página institucional ou portfólio do autor.
