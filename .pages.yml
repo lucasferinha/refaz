@@ -67,7 +67,7 @@ content:
 
   - name: site
     label: Configurações do Site
-    path: src/_data/_config.json
+    path: src/_data/config.json
     type: file
     fields:
       - name: siteName
