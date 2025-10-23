@@ -11,7 +11,7 @@
     text-transform: uppercase;
 
     &::before {
-      content: url("/assets/images/quadrado.svg");
+      content: url("/assets/images/ui/quadrado.svg");
       display: inline-block;
       margin-right: 4px;
     }

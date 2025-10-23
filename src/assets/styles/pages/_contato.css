@@ -1,3 +1,11 @@
+.entre-em-contato__link {
+  font-style: italic;
+  color: inherit;
+  text-decoration: underline;
+  background-color: var(--branco-quase);
+  padding: 8px 16px;
+}
+
 #map {
   height: 360px;
 }

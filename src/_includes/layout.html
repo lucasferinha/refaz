@@ -41,7 +41,7 @@ layout: head.html
             <li class="pagination__item pageprev">
                 <a href="{{ previousPost.url }}" rel="prev" aria-label="Post anterior: {{ previousPost.data.title }}">
                     <span class="pagination-direction">
-                        <img src="/assets/images/seta[2]-esquerda.svg" alt=""> Anterior
+                        <img src="/assets/images/ui/seta[2]-esquerda.svg" alt="Seta esquerda"> Anterior
                     </span>
                     <span class="pagination-title">{{ previousPost.data.title }}</span>
                     <time datetime="{{ previousPost.date | dateFormat: 'YYYY-MM-DD' }}">
@@ -55,7 +55,7 @@ layout: head.html
             <li class="pagination__item pagenext">
                 <a href="{{ nextPost.url }}" rel="next" aria-label="Próximo post: {{ nextPost.data.title }}">
                     <span class="pagination-direction">
-                        Próximo <img src="/assets/images/seta[2]-direita.svg" alt="">
+                        Próximo <img src="/assets/images/ui/seta[2]-direita.svg" alt="Seta Direita">
                     </span>
                     <span class="pagination-title">{{ nextPost.data.title }}</span>
                     <time datetime="{{ nextPost.date | dateFormat: 'YYYY-MM-DD' }}">

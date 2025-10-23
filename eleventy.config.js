@@ -53,14 +53,20 @@ export default function (eleventyConfig) {
   });
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     formats: ["webp"],
-    widths: [320, 640],
+    widths: [300, 450, 600],
 
     filenameFormat(id, src, width, format) {
       src = src.replace(/\\/g, "/");
       const extension = path.extname(src);
       const name = path.basename(src, extension);
-
       return `${name}-${width}w.${format}`;
+    },
+
+    sharpOptions: {
+      webp: {
+        quality: 75, // compactação equilibrada: 50-80 é ideal para web
+        effort: 6, // 1-6, 6 = máxima compressão sem alterar qualidade perceptível
+      },
     },
 
     htmlOptions: {
