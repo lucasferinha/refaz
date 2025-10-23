@@ -10,23 +10,23 @@ content:
     view:
       fields: [title, published, date, tags]
     fields:
-      - name: published 
+      - name: published
         label: Publicado
-        type: boolean 
+        type: boolean
         default: true
         description: Marque para publicar o post no site. Desmarque para manter como rascunho.
 
-      - name: title 
+      - name: title
         label: Título da Postagem
         type: string
         description: Escreva um título claro e atrativo, que resuma o conteúdo.
 
-      - name: siteDescription 
+      - name: siteDescription
         label: Descrição (SEO)
         type: string
         description: Resuma o conteúdo em até 160 caracteres. Aparece no Google e ao compartilhar o link.
 
-      - name: date 
+      - name: date
         label: Data da Publicação
         type: date
         description: Defina a data de publicação do post.
@@ -60,7 +60,7 @@ content:
         required: false
         description: Envie a imagem e use o caminho no texto, por exemplo:![Descrição](/assets/images/nome-da-imagem.jpg).
 
-      - name: body 
+      - name: body
         label: Conteúdo do Post
         type: text
         description: Escreva o conteúdo completo usando Markdown.
@@ -87,7 +87,7 @@ content:
         description: Informe o endereço completo, por exemplo:https://institutorefaz.ong.br.
 
       - name: authorLink
-        label: URL do Autor ou Organização
+        label: URL do Autor ou Organização(instagram, proprio site, etc)
         type: string
         pattern: ^(https?:\/\/)?(www\.)?[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/[^\s]*)?$
         description: Link para o perfil, página institucional ou portfólio do autor.
