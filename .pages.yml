@@ -7,8 +7,6 @@ content:
     label: Posts
     type: collection
     path: src/blog/posts
-    media_folder: "" # deixa vazio para usar pasta do post
-    public_folder: "" # deixa vazio também
     view:
       fields: [title, published, date, tags]
     fields:
