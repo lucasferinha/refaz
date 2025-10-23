@@ -17,7 +17,7 @@ content:
         description: Marque para publicar o post no site. Desmarque para manter como rascunho.
 
       - name: title 
-        label: Título da Matéria
+        label: Título da Postagem
         type: string
         description: Escreva um título claro e atrativo, que resuma o conteúdo.
 
